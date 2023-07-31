@@ -1,0 +1,11 @@
+{% extends "template.html" %}
+{% block content %}
+<form method = "POST" enctype="multipart/form-data" action = "{{url_for('uploadFile')}}">   
+    <input type="file" name="file" accept=".csv">
+    <input type = "submit" value="Upload"> 
+</form>
+<p style="color:blue;">Choose csv file to upload file Unlabel Data</p>
+<form action="{{url_for('showDataUnlabel')}}" target="_blank">
+    <input type="submit" value="Show CSV"/>
+</form>
+{% endblock %}

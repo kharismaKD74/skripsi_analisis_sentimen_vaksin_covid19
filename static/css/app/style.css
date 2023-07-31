@@ -1,0 +1,34 @@
+/* ======================= */
+/* Chart element dimension */
+/* ======================= */
+.chart {
+    width: 100%;
+    height: 400px;
+}
+
+/* ====================================================== */
+/* Hide scroll bar, but while still being able to scroll */
+/* ====================================================== */
+.sb-sidenav-menu {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.sb-sidenav-menu::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+/* ===================== */
+/* 🎨Custom Hover Effect */
+/* ===================== */
+.sb-nav-link-icon, .nav-link {
+    /* https://www.w3schools.com/css/css3_animations.asp */
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s !important;
+}
+.sb-sidenav-dark .nav-link:hover, 
+.sb-sidenav-light .nav-link:hover,
+.sb-sidenav-dark .nav-link:hover .sb-nav-link-icon,
+.sb-sidenav-light .nav-link:hover .sb-nav-link-icon {
+    background: #0d6efd !important;
+    color: white !important;
+    padding-left: 15px;
+}

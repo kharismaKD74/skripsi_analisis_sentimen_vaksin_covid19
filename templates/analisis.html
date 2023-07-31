@@ -1,0 +1,50 @@
+{% extends "template.html" %}
+{% block content %}
+
+<div id="grafikPie" style="height: 500px;"></div>
+<script src="{{url_for('static', filename='js/vendor/echarts.js')}}"></script>
+<script src="{{url_for('static', filename='js/app/analisis.js')}}"></script>
+<table>
+    <tr>
+        <th>Sentimen Positive</th>
+        <th></th>
+        <th>Sentimen Netral</th>
+        <th></th>
+        <th>Sentimen Negative</th>
+    </tr>
+    <tr>
+        <td><img src="{{url_for('static', filename='positive.png')}}" style="border:2px solid rgb(22, 53, 233);" width="350" /></td>
+        <td></td>
+        <td><img src="{{url_for('static', filename='neutral.png')}}" style="border:2px solid rgb(22, 53, 233);"  width="350" /></td>
+        <td></td>
+        <td><img src="{{url_for('static', filename='negative.png')}}" style="border:2px solid rgb(22, 53, 233);" width="350" /></td>
+    </tr>
+</table>
+<br>
+<br>
+<h5 style="font-family:verdana;">Count Positive Tweet</h5>
+{{pos_count.to_html(classes="table table-striped table-bordered") | safe}}
+<br>
+<h5 style="font-family:verdana;">Count Neutral Tweet</h5>
+{{neu_count.to_html(classes="table table-striped table-bordered") | safe}}
+<br>
+<h5 style="font-family:verdana;">Count Negative Tweet</h5>
+{{neg_count.to_html(classes="table table-striped table-bordered") | safe}}
+<br>
+<br>
+<h6 style="font-family:verdana; text-align:justify; line-height: 2;">
+    Berdasarkan hasil analisis sentimen Twitter terkait vaksinasi COVID-19 di Indonesia, ditemukan bahwa mayoritas tweet memiliki sentimen positif.
+    Hal ini menunjukkan bahwa masyarakat Indonesia cenderung mendukung program vaksinasi COVID-19 yang dilakukan oleh pemerintah.
+    Dalam rangka meningkatkan efektivitas program vaksinasi COVID-19 di Indonesia, pemerintah dapat mempertimbangkan beberapa saran berikut :
+    <br>
+    1. Meningkatkan Komunikasi dengan cara menyediakan informasi yang akurat dan mudah dipahami tentang manfaat dan efektivitas vaksinasi COVID-19.
+    <br>
+    2. Meningkatkan Akses dengan cara memperluas jangkauan dan mempermudah proses pendaftaran dan pelaksanaan vaksinasi.
+    <br>
+    3. Meningkatkan Transparansi dengan cara menyediakan informasi yang terbuka dan mudah diakses tentang proses dan hasil vaksinasi.
+    <br>
+    4. Meningkatkan Keamanan dengan cara memastikan bahwa vaksin yang digunakan aman dan efektif, serta memperkuat pengawasan dan pengendalian kualitas vaksin.
+    <br>
+    Dengan mempertimbangkan saran-saran tersebut, diharapkan program vaksinasi COVID-19 di Indonesia dapat berjalan dengan lebih efektif dan dapat meningkatkan penerimaan dan partisipasi masyarakat dalam program vaksinasi.
+</h6>
+{% endblock %}

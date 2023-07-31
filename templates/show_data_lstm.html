@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% block content %}
+<table class="table table-striped table-bordered">
+   <thead>
+       <tr>
+           <th scope="col">Tweet</th>
+           <th scope="col">True_Emotion</th>
+           <th scope="col">Predicted</th>
+       </tr>
+   </thead>
+   <tbody>
+   {% for row in data %}
+       <tr>
+           <td>{{row['tweet']}}</td>
+           <td>{{row['true_emotion']}}</td>
+           <td>{{row['predicted']}}</td>
+       </tr>
+   {% endfor %}
+   </tbody>
+</table>
+{% endblock %}

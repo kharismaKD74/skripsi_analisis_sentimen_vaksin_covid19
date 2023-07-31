@@ -1,0 +1,5 @@
+{% extends "template.html" %}
+{% block content %}
+<h2>Data Berlabel</h2>
+{{data.to_html(classes="table table-striped table-bordered") | safe}}
+{% endblock %}

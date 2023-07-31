@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block content %}
+<h3 style="font-family:arial;">Aplikasi Analisis Sentimen Berbasis Web dengan Naive Bayes dan LSTM</h3>
+<hr>
+<p style="font-family:Lucida Sans Unicode; text-align:justify; line-height: 2;">Aplikasi ini dirancang untuk melakukan analisis sentimen menggunakan metode Naive Bayes dan LSTM, 
+    dengan tujuan mengklasifikasikan sentimen positif, netral, atau negatif dari data twitter dengan topik vaksin covid-19 di Indonesia.
+    Dalam aplikasi ini, pengguna dapat mengupload data twitter dan aplikasi akan menggunakan metode Naive Bayes 
+    dan LSTM untuk menganalisis sentimen dari data tersebut. 
+    Metode Naive Bayes menggunakan teorema probabilitas untuk melakukan klasifikasi sentimen, 
+    sementara metode LSTM adalah jenis arsitektur Deep Learning yang digunakan untuk memproses input secara berulang-ulang.
+    Dalam aplikasi ini, data twitter yang di upload akan diprediksi sentimennya mengggunakan Naive Bayes dengan data yang sudah berlabel sentimennya.
+    Data hasil prediksi sentimen dengan Naive Bayes kemudian digabung dengan data yang sudah berlabel. 
+    Dan selanjutnya data tersebut digunakan untuk metode LSTM. Hasil akurasi dari analisis sentimen menggunakan LSTM yaitu 75%.
+    Hasil analisis sentimen dalam aplikasi ini berupa klasifikasi sentimen positif, netral, dan negatif dengan menggunakan diagram lingkaran untuk visualisasi klasifikasinya.</p>
+{% endblock %}
